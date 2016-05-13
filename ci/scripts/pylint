@@ -4,4 +4,4 @@ set -e -x
 pip install pylint
 cd dynamic-dynamodb
 python setup.py install
-pylint -E
+pylint -E dynamic-dynamodb
