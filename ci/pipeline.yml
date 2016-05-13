@@ -1,0 +1,19 @@
+---
+jobs:
+  - name: unit
+    plan:
+      - get: dynamic-dynamodb
+        trigger: true
+      - task: nosetests
+        file: ci/nosetests.yml
+      - task: pylint
+        file: ci/pylint.yml
+
+
+resources:
+  - name: dynamic-dynamodb
+    type: git
+    source:
+      uri: 'https://github.com/zdoherty/dynamic-dynamodb.git'
+      branch: master
+
