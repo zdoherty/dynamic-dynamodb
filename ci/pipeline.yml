@@ -4,8 +4,8 @@ jobs:
     plan:
       - get: dynamic-dynamodb
         trigger: true
-      - task: nosetests
-        file: dynamic-dynamodb/ci/nosetests.yml
+      #- task: nosetests
+      #  file: dynamic-dynamodb/ci/nosetests.yml
       - task: pylint
         file: dynamic-dynamodb/ci/pylint.yml
 
