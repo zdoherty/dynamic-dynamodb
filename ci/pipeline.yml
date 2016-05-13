@@ -5,9 +5,9 @@ jobs:
       - get: dynamic-dynamodb
         trigger: true
       - task: nosetests
-        file: ci/nosetests.yml
+        file: dynamic-dynamodb/ci/nosetests.yml
       - task: pylint
-        file: ci/pylint.yml
+        file: dynamic-dynamodb/ci/pylint.yml
 
 
 resources:
