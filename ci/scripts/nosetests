@@ -3,4 +3,5 @@ set -e -x
 
 pip install nose
 cd dynamic-dynamodb
+python setup.py install
 nosetests
