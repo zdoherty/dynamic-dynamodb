@@ -1,0 +1,6 @@
+#!/bin/bash
+set -e -x
+
+pip install nose
+cd dynamic-dynamodb
+nosetests

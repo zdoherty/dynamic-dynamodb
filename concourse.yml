@@ -1,0 +1,23 @@
+---
+resources:
+  - name: source-code
+    type: git
+    source:
+      uri: 'https://github.com/zdoherty/dynamic-dynamodb.git'
+      branch: master
+
+jobs:
+  - name: fetch-source
+    plan:
+      - get: source-code
+
+  - name: nosetests
+    plan:
+      - task: nosetests
+        file: ci/nosetests.yml
+
+  - name: pylint
+    plan:
+      - task: pylint
+        file: ci/pylint.yml
+

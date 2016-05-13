@@ -1,0 +1,6 @@
+#!/bin/bash
+set -e -x
+
+pip install pylint
+cd dynamic-dynamodb
+pylint -E
